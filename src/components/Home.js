@@ -1,10 +1,10 @@
 
 import React from 'react';
-import { Tabs, Button, Spin } from 'antd';
+import { Tabs, Spin } from 'antd';
 import {GEO_OPTIONS, AUTH_PREFIX, API_ROOT, TOKEN_KEY} from "../constants"
 import $ from 'jquery';
 import {Gallery} from "./Gallery";
-
+import {CreatePostButton} from "./CreatePostButton";
 
 const TabPane = Tabs.TabPane;
 
@@ -97,7 +97,7 @@ loadNearbyPosts = () => {
 }
 
     render() {
-        const operations = <Button type="primary">Create New Post</Button>;
+        const operations = <CreatePostButton type="primary">Create New Post</CreatePostButton>;
         return (
             <Tabs tabBarExtraContent={operations} className="main-tabs">
                 <TabPane tab="Posts" key="1">
